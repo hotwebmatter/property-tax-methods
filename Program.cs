@@ -9,6 +9,12 @@ namespace property_tax_methods
         const double EXEMPTION = 25000,
                      MILLAGE_RATE = .01003,
                      INCREASE_RATE = 2.7;
+        // declare class-level static variables
+        static string propertyAddress;
+        static double assessedValue,
+                      valueAfterIncrease,
+                      valueAfterExemption,
+                      propertyTax;
         static void Main(string[] args)
         {
             WriteLine("{0}{1:C}", "Millage per $1000:", 1000 * MILLAGE_RATE);
