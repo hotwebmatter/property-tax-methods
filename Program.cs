@@ -20,6 +20,7 @@ namespace property_tax_methods
             Write("Enter property address: ");
             propertyAddress = ReadLine();
             assessedValue = ReadDouble("Enter assesed value:");
+            CalculateTaxes();
             WriteLine("{0}{1:C}", "Millage per $1000:", 1000 * MILLAGE_RATE);
         }
         static double ReadDouble(string label)
