@@ -17,6 +17,8 @@ namespace property_tax_methods
                       propertyTax;
         static void Main(string[] args)
         {
+            Write("Property address: ");
+            propertyAddress = ReadLine();
             WriteLine("{0}{1:C}", "Millage per $1000:", 1000 * MILLAGE_RATE);
         }
     }
