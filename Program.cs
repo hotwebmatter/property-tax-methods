@@ -21,7 +21,7 @@ namespace property_tax_methods
             propertyAddress = ReadLine();
             assessedValue = ReadDouble("Enter assesed value:");
             CalculateTaxes();
-            WriteLine("{0}{1:C}", "Millage per $1000:", 1000 * MILLAGE_RATE);
+            WriteLine(DisplayTaxes());
         }
         static double ReadDouble(string label)
         {
@@ -40,6 +40,19 @@ namespace property_tax_methods
             valueAfterIncrease = assessedValue * (1 + INCREASE_RATE);
             valueAfterExemption = valueAfterIncrease - EXEMPTION;
             propertyTax = valueAfterExemption * MILLAGE_RATE;
+        }
+        static string DisplayTaxes()
+        {
+            string result = String.Format("\n****** Property Tax Assessment Table ******\n");
+            // result += String.Format("* {0, 21}{1, 18:C} *\n", "Millage per $1000:", 1000 * MILLAGE_RATE);
+            result += String.Format("* {0, 21}{1, 18} *\n", "Property Address:", propertyAddress);
+            result += String.Format("* {0, 21}{1, 18:C} *\n", "Assessed Value:", assessedValue);
+            result += String.Format("* {0, 21}{1, 18:C} *\n", "Value After Increase:", valueAfterIncrease);
+            result += String.Format("* {0, 21}{1, 18:C} *\n", "Exemption:", EXEMPTION);
+            result += String.Format("* {0, 21}{1, 18:C} *\n", "Taxable Value:", valueAfterExemption);
+            result += String.Format("* {0, 21}{1, 18:C} *\n", "Property Tax:", propertyTax);
+            result += String.Format("*******************************************\n");
+            return result;
         }
     }
 }
