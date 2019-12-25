@@ -18,9 +18,9 @@ the current year. Provide another method that displays the formatted values.
 ```
 $ dotnet bin/Debug/netcoreapp2.1/property-tax-methods.dll
 Enter property address: 123 Shady Lane
-Enter assesed value: jkl;
+Enter assessed value: jkl;
 Invalid input!
-Enter assesed value: 250000
+Enter assessed value: 250000
 
 ****** Property Tax Assessment Table ******
 *     Property Address:    123 Shady Lane *

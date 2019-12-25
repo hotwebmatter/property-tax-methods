@@ -19,7 +19,7 @@ namespace property_tax_methods
         {
             Write("Enter property address: ");
             propertyAddress = ReadLine();
-            assessedValue = ReadDouble("Enter assesed value:");
+            assessedValue = ReadDouble("Enter assessed value:");
             CalculateTaxes();
             WriteLine(DisplayTaxes());
         }
