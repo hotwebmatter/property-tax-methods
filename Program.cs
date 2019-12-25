@@ -37,6 +37,8 @@ namespace property_tax_methods
         static void CalculateTaxes()
         {
             valueAfterIncrease = assessedValue * (1 + INCREASE_RATE);
+            valueAfterExemption = valueAfterIncrease - EXEMPTION;
+            propertyTax = valueAfterExemption * MILLAGE_RATE;
         }
     }
 }
